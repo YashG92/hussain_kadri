@@ -380,7 +380,8 @@ nav .fas{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/phone-background.png);
+        margin-top: 100px;
+        background-image: url(images/husen_portrait.jpeg);
     }
 
     .header-text{
