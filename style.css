@@ -63,7 +63,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #faad1b;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -84,7 +84,7 @@ nav ul li a:hover::after{
 }
 
 .header-text h1 span{
-    color: #ff004f;
+    color: #faad1b;
 }
 
 /*------about-------*/
@@ -135,7 +135,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #faad1b;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -147,17 +147,37 @@ nav ul li a:hover::after{
 }
 
 .tab-contents ul li{
-    list-style: none;
     margin: 10px 0;
+}
+
+.tab-contents span{
+    margin: 10px 0;
+    color: #b54769;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .tab-contents ul li span{
     color: #b54769;
-    font-size: 14px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .tab-contents{
     display: none;
+}
+
+.software-skills-logos {
+    display: flex;
+    justify-content: start; /* Adjusts spacing between logos */
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.software-skills-logos img {
+    width: 50px; /* Adjust the size of the logos as needed */
+    height: auto;
 }
 
 .tab-contents.active-tab{
@@ -185,7 +205,8 @@ nav ul li a:hover::after{
     transition: background 0.5s, transform 0.5s;
 }
 
-.services-list div i{
+.services-list div img{
+    height: 85px;
     font-size: 50px;
     margin-bottom: 30px;
 }
@@ -205,8 +226,27 @@ nav ul li a:hover::after{
 }
 
 .services-list div:hover{
-    background: #ff004f;
+    background: #faad1b;
+    color: #080808;
     transform: translateY(-10px);
+}
+
+.services-item:hover h2{
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.services-item:hover .service-img1 {
+    content: url('images/branding_black.png');
+    transition: 0.3s ease; 
+}
+.services-item:hover .service-img2 {
+    content: url('images/packaging_black.png');
+    transition: 0.3s ease; 
+}
+.services-item:hover .service-img3 {
+    content: url('images/Social\ media.png');
+    transition: 0.3s ease; 
 }
 
 /* -------portfolio--------*/
@@ -238,7 +278,7 @@ nav ul li a:hover::after{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    background: linear-gradient(rgba(0,0,0,0.6), #faad1b);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -262,7 +302,7 @@ nav ul li a:hover::after{
 
 .layer a{
     margin-top: 20px;
-    color: #ff004f;
+    color: #faad1b;
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
@@ -285,7 +325,7 @@ nav ul li a:hover::after{
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid #faad1b;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -294,7 +334,7 @@ nav ul li a:hover::after{
 }
 
 .btn:hover{
-    background: #ff004f;
+    background: #faad1b;
 }
 
 /* -------contact------ */
@@ -312,7 +352,7 @@ nav ul li a:hover::after{
 }
 
 .contact-left p i{
-    color: #ff004f;
+    color: #faad1b;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -331,13 +371,13 @@ nav ul li a:hover::after{
 }
 
 .social-icons a:hover{
-    color: #ff004f;
+    color: #faad1b;
     transform: translateY(-5px);
 }
 
 .btn.btn2{
     display: inline-block;
-    background: #ff004f;
+    background: #faad1b;
 }
 
 .contact-right form{
@@ -399,7 +439,7 @@ nav .fas{
     }
 
     nav ul{
-        background: #ff004f;
+        background: #faad1b;
         position: fixed;
         top: 0;
         right: -200px;
@@ -429,6 +469,7 @@ nav .fas{
         flex-basis: 100%;
     }
     .about-col-1{
+        display: none;
         margin-bottom: 30px;
     }
     .about-col-2{
