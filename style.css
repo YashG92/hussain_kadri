@@ -275,6 +275,25 @@ nav ul li a:hover::after{
     transition: transform 0.5s;
 }
 
+/* Default style */
+#more-work {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* When expanded */
+#more-work.expanded {
+    max-height: 2000px; /* Adjust based on content height */
+    opacity: 1;
+}
+
+#see-more-btn{
+    color: #080808;
+}
+
+
 .layer{
     width: 100%;
     height: 0;

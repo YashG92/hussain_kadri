@@ -112,38 +112,68 @@
      </div>
 
      <!--portfolio-->
-     <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="images/work-1.png" >
-                    <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, asperiores?</p>
-                        <a href="https://www.behance.net/gallery/179010663/Nood-Suppliment-Packaging" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/work-2.png" >
-                    <div class="layer">
-                        <h3>Label Design</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, asperiores?</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/work-3.png" >
-                    <div class="layer">
-                        <h3>Poster Design</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, asperiores?</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
+<!--portfolio-->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list" id="work-list">
+            <!-- Initial work items -->
+            <div class="work">
+                <img src="images/work-1.png" alt="Work 1">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
-            <a href="#" class="btn">See more</a>
+            <div class="work">
+                <img src="images/work-2.png" alt="Work 2">
+                <div class="layer">
+                    <h3>Label Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png" alt="Work 3">
+                <div class="layer">
+                    <h3>Poster Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
         </div>
-     </div>
+        <!-- Hidden work items -->
+        <div class="work-list" id="more-work">
+            <div class="work">
+                <img src="images/work-1.png" alt="Work 4">
+                <div class="layer">
+                    <h3>Product Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png" alt="Work 5">
+                <div class="layer">
+                    <h3>Website Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png" alt="Work 5">
+                <div class="layer">
+                    <h3>Website Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <button id="see-more-btn" class="btn">See more</button>
+    </div>
+</div>
+
 
      <!--     contact      -->
      <div id="contact">
@@ -207,6 +237,21 @@
             function closemenu(){
                 sidemenu.style.right = "-200px";
             }
+
+
+            document.getElementById("see-more-btn").addEventListener("click", function() {
+            var moreWork = document.getElementById("more-work");
+
+            // Toggle class for smooth transition
+            if (moreWork.classList.contains("expanded")) {
+                moreWork.classList.remove("expanded");
+                this.innerText = "See more"; // Reset button text
+            } else {
+                moreWork.classList.add("expanded");
+                this.innerText = "See less"; // Change button text
+            }
+        });
+
         </script>
 
 <script>
